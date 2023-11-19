@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black;
+}
+.tasks div:not(:last-child) {
+  margin-bottom: 16px;
+}
+@layer components {
+  .main-form {
+    @apply p-2 bg-[#202123] mt-10 rounded-md mx-auto w-[70%] flex items-center gap-4;
+  }
+  .edit-form {
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4  bg-indigo-300 w-[80%] md:w-[50%] rounded-md;
+  }
+  .edit-close {
+    @apply absolute bg-red-700 w-[30px] h-[30px] rounded-full flex items-center justify-center -top-[15px] -right-[15px] cursor-pointer;
+  }
+}
